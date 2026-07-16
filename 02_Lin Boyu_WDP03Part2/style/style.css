@@ -1,0 +1,687 @@
+/* ========== Global Reset ========== */
+* {
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 2px;
+    text-align: center;
+    border: none;
+}
+
+/* ========== Base Styles ========== */
+body, .top-nav, .card, section#PRISEC, section#post, 
+aside#AS, aside#ccaS, aside#subject, aside#achivement, 
+.Part1, .strength-weakness > div {
+    background: rgba(10, 20, 35, 0.8);
+    border-radius: 12px;
+    border: 1px solid #2a5a7a;
+}
+
+body {
+    background: url('../images/background.png') center/cover fixed no-repeat;
+    font-family: 'Courier New', monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ========== Top Navigation Bar ========== */
+.top-nav {
+    background: rgba(16, 28, 44, 0.92);
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 1200px;
+    border-bottom: 2px solid #3a6b92;
+    border-top: 1px solid #2a4a6a;
+}
+
+.nav-links {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+    justify-content: center;
+}
+
+.nav-links a {
+    color: #b8d4f0;
+    text-decoration: none;
+    padding: 6px 18px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: monospace;
+    letter-spacing: 2px;
+    border-left: 1px solid #3a6b92;
+    border-right: 1px solid #3a6b92;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    background: #2a5a8a;
+    color: white;
+}
+
+/* ========== Sidebar ========== */
+.sidebar {
+    position: fixed;
+    right: 15px;
+    top: 100px;
+    background: rgba(8, 16, 28, 0.5);
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    z-index: 100;
+    border: 1px solid #2a5a7a;
+    box-shadow: 0 0 12px rgba(0, 40, 60, 0.5);
+}
+
+.sidebar a {
+    display: block;
+    color: #8ab8d4;
+    text-decoration: none;
+    padding: 6px 12px;
+    margin: 8px 0;
+    border-radius: 4px;
+    font-size: 12px;
+    border: 1px solid #2a4a6a;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background: #1a4a6e;
+    color: white;
+    border-color: #5a9acc;
+}
+
+.sidebar h3 {
+    margin: 0 0 12px;
+    font-size: 12px;
+    color: #7aabce;
+    letter-spacing: 3px;
+    border-bottom: 1px solid #3a6b92;
+    padding-bottom: 5px;
+}
+
+/* ========== Main Card ========== */
+.card {
+    max-width: 1200px;
+    width: 100%;
+    background: rgba(5, 12, 22, 0.85);
+    padding: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ========== Headings ========== */
+h1 {
+    color: #c0e0ff;
+    letter-spacing: 4px;
+    text-shadow: 0 0 6px #2a6a9e;
+    font-size: 2rem;
+}
+
+h2 {
+    color: #9ac0e0;
+    margin: 25px 0 10px;
+    letter-spacing: 2px;
+}
+
+h3, .card1, .div1, p, footer p {
+    margin: 5px 0 0 0;
+    color: #b0c8e0;
+}
+
+.card1 {
+    background: #1a3a5a;
+    padding: 8px 18px;
+    border-radius: 20px;
+    display: inline-block;
+    border: 1px solid #4a7ab5;
+}
+
+/* ========== Images ========== */
+.photo, .photos img {
+    border-radius: 8px;
+    border: 1px solid #3a6b92;
+}
+
+.photo {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.photos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.photos img {
+    width: 180px;
+    height: 220px;
+    object-fit: cover;
+    transition: 0.2s;
+}
+
+.photos img:hover {
+    border-color: #6aaeda;
+    box-shadow: 0 0 10px #2a5a8a;
+}
+
+.headshot img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid #3a6b92;
+}
+
+/* ========== Buttons ========== */
+a#buttom1, a#buttom2, .buttom, .article-link {
+    background: #1a3a5a;
+    color: #b8d4f0;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid #3a6b92;
+    transition: 0.2s;
+}
+
+a#buttom1, a#buttom2 {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 8px 12px;
+    float: left;
+}
+
+a#buttom1:hover, a#buttom2:hover, .article-link:hover {
+    background: #2a5a8a;
+    color: white;
+}
+
+.buttom {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    float: left;
+}
+
+.article-link {
+    display: inline-block;
+    margin: 5px 8px;
+    padding: 5px 12px;
+    font-size: 12px;
+}
+
+/* ========== Tables ========== */
+table {
+    border: 1px solid #3a6b92;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+th, td {
+    border: 1px solid #3a6b92;
+    padding: 8px 15px;
+    color: #c0dce8;
+}
+
+th {
+    background: #1a3a5a;
+    color: #d4eaff;
+}
+
+/* ========== Lists ========== */
+ul, ol {
+    display: table;
+    margin: 0 auto;
+    padding: 10px 25px 10px 40px;
+    text-align: left;
+    color: #b8d4f0;
+}
+
+li {
+    text-align: left;
+    margin: 5px 0;
+}
+
+/* ========== Aside Panels ========== */
+aside#AS, aside#ccaS, aside#subject, aside#achivement {
+    width: 45%;
+    min-height: 300px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 10px 0 0;
+    padding: 20px;
+}
+
+aside#subject {
+    min-height: 300px;
+    padding: 0 20px;
+}
+
+/* ========== Footer ========== */
+footer {
+    background: rgba(5, 12, 22, 0.9);
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 8px;
+    border-top: 1px solid #2a5a7a;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer a {
+    color: #9ac0e0;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* ========== Special Sections ========== */
+.Part1, .strength-weakness > div {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.part2 {
+    width: 30%;
+    padding: 15px;
+    margin-left: 15px;
+    float: right;
+    font-style: italic;
+    background: rgba(10, 20, 35, 0.8);
+    border-left: 3px solid #3a6b92;
+    color: #b8d4f0;
+}
+
+/* ========== Strengths & Weaknesses ========== */
+.strength-weakness {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.strength-weakness > div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+.Weaknesses {
+    border-color: #5a4a6e;
+    background: rgba(20, 15, 30, 0.85);
+}
+
+.strength-weakness img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #3a6b92;
+}
+
+/* ========== Remove Borders ========== */
+body, html, footer, ul, ol, li, a, p, .photos, h1, h2, h3, caption, header, img, .strength-weakness {
+    border: none;
+}
+
+/* ========== Image Map Styles ========== */
+#Map {
+    text-align: center;
+}
+
+#Map .div2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#Map img[usemap] {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#Map img[usemap]:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(58, 107, 146, 0.5);
+}
+
+#Map p {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #b0c8e0;
+}
+
+/* Mobile Image Map Adjustments */
+@media (max-width: 768px) {
+    #Map img[usemap] {
+        max-width: 100%;
+    }
+    
+    #Map p {
+        font-size: 11px;
+        margin-top: 10px;
+    }
+}
+
+/* Desktop Image Map Adjustments */
+@media (min-width: 1280px) {
+    #Map img[usemap] {
+        max-width: 500px;
+    }
+    
+    #Map p {
+        font-size: 14px;
+        margin-top: 18px;
+    }
+}
+
+/* ========== Responsive: Mobile & Tablet (≤768px) ========== */
+@media (max-width: 768px) {
+    /* Tighter spacing */
+    * {
+        padding: 5px;
+        margin: 1px;
+    }
+    
+    body {
+        padding: 10px;
+    }
+    
+    /* Navigation becomes single column */
+    .nav-links {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+    
+    .nav-links a {
+        padding: 10px;
+        font-size: 11px;
+        letter-spacing: 1px;
+        border-left: none;
+        border-right: none;
+    }
+    
+    /* Sidebar becomes relative layout */
+    .sidebar {
+        position: relative;
+        right: auto;
+        top: auto;
+        margin: 10px auto;
+        width: 100%;
+        max-width: 300px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        padding: 8px;
+    }
+    
+    .sidebar h3 {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    
+    .sidebar a {
+        display: inline-block;
+        margin: 3px;
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+    
+    /* Less card padding */
+    .card {
+        padding: 15px;
+    }
+    
+    /* Gallery becomes single column */
+    .photos {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .photos img {
+        width: 200px;
+        height: 240px;
+    }
+    
+    /* Aside panels become full width */
+    aside#AS, aside#ccaS, aside#subject, aside#achivement {
+        width: 100%;
+        min-height: auto;
+        margin: 15px 0 0 0;
+        display: block;
+    }
+    
+    /* Strengths & Weaknesses stack vertically */
+    .strength-weakness {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .strength-weakness > div {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .strength-weakness img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    /* Floated panel becomes full width */
+    .part2 {
+        width: 100%;
+        float: none;
+        margin: 15px 0 0 0;
+    }
+    
+    /* Buttons no longer float */
+    a#buttom1, a#buttom2 {
+        float: none;
+        display: inline-block;
+        margin: 5px;
+    }
+    
+    .buttom {
+        float: none;
+        display: inline-block;
+        margin: 5px;
+    }
+    
+    /* Table horizontal scroll */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    /* Tighter table cells */
+    th, td {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    
+    /* Smaller headings */
+    h1 {
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+    }
+    
+    h2 {
+        font-size: 1.1rem;
+        margin: 15px 0 5px;
+    }
+    
+    /* Smaller avatar */
+    .headshot img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .photo {
+        max-width: 100%;
+    }
+    
+    /* Less list padding */
+    ul, ol {
+        padding: 8px 15px 8px 25px;
+    }
+    
+    /* Footer adjustments */
+    footer ul {
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    footer li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    p, li, .article-link {
+        font-size: 13px;
+    }
+    
+    .card1 {
+        padding: 5px 12px;
+        font-size: 14px;
+    }
+}
+
+/* ========== Responsive: Desktop (≥1280px) ========== */
+@media (min-width: 1280px) {
+    /* Larger outer margin */
+    body {
+        padding: 30px;
+    }
+    
+    /* Wider cards and navigation */
+    .top-nav, .card {
+        max-width: 1400px;
+    }
+    
+    .card {
+        padding: 60px;
+    }
+    
+    /* Larger nav spacing */
+    .nav-links {
+        gap: 25px;
+    }
+    
+    .nav-links a {
+        padding: 8px 28px;
+        font-size: 15px;
+        letter-spacing: 3px;
+    }
+    
+    /* Larger sidebar */
+    .sidebar {
+        right: 25px;
+        top: 120px;
+        padding: 18px;
+    }
+    
+    .sidebar a {
+        padding: 8px 16px;
+        font-size: 13px;
+        margin: 10px 0;
+    }
+    
+    .sidebar h3 {
+        font-size: 14px;
+        margin: 0 0 15px;
+    }
+    
+    /* Larger headings */
+    h1 {
+        font-size: 2.5rem;
+        letter-spacing: 6px;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+        letter-spacing: 3px;
+    }
+    
+    /* Larger gallery spacing and images */
+    .photos {
+        gap: 45px;
+    }
+    
+    .photos img {
+        width: 220px;
+        height: 260px;
+    }
+    
+    .headshot img {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .photo {
+        max-width: 500px;
+    }
+    
+    /* Wider aside panels */
+    aside#AS, aside#ccaS, aside#subject, aside#achivement {
+        width: 48%;
+        min-height: 350px;
+        padding: 25px;
+        margin: 20px 15px 0 0;
+    }
+    
+    /* Larger strengths & weaknesses gap */
+    .strength-weakness {
+        gap: 35px;
+    }
+    
+    .strength-weakness img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    /* Narrower floated panel */
+    .part2 {
+        width: 28%;
+        padding: 20px;
+        margin-left: 20px;
+    }
+    
+    /* Larger table padding */
+    th, td {
+        padding: 10px 22px;
+        font-size: 15px;
+    }
+    
+    /* Larger footer padding */
+    footer {
+        padding: 30px;
+        margin-top: 70px;
+    }
+}
